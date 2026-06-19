@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Génesis | Agencia de Transformación Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">DIGITAL <span>GÉNESIS</span></div>
+            
+            <nav class="nav-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#metodologia">Metodología</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="dark-mode-toggle" class="btn-toggle">Modo Oscuro</button>
+                <button id="menu-hamburger" class="hamburger">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="side-menu" class="mobile-side-menu">
+        <button id="close-menu" class="btn-close">×</button>
+        <nav class="mobile-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#metodologia">Metodología</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1>Traducimos tu pensamiento en <span>instrucciones lógicas</span></h1>
+            <p>Dejá de adaptarte a la tecnología. Hacemos que tus propios equipos informáticos ejecuten las tareas por vos. Desde sistemas automatizados locales hasta la expansión de tu marca hacia nuevas regiones.</p>
+            <div class="cta-buttons">
+                <a href="#servicios" class="btn-primary">Ver Soluciones</a>
+                <a href="#contacto" class="btn-secondary">Iniciar Relevamiento</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="services-section">
+        <h2>Líneas de Operación Tecnológica</h2>
+        <p class="section-subtitle">Soluciones robustas diseñadas a la medida de tu presupuesto y objetivos comerciales.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-icon">⚡</div>
+                <h3>Automatización Local</h3>
+                <p>Desarrollo de software y aplicaciones de control interno (Python/C++). Cierres de caja automáticos, control de inventario estricto y optimización de hardware sin dependencias forzosas de la nube.</p>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">🌐</div>
+                <h3>Expansión PyME & E-Commerce</h3>
+                <p>Ecosistemas web robustos creados en HTML, CSS y JS. Desarrollamos tu catálogo digital y plataformas de venta online con asistencia integrada para expandir tu rango de clientes a otras regiones.</p>
+            </div>
+            <div class="service-card">
+                <div class="card-icon">🛡️</div>
+                <h3>Sistemas a Medida</h3>
+                <p>Arquitectura lógica exclusiva para requerimientos de alta complejidad. Diseñamos la infraestructura de software exacta que tu empresa demanda bajo los estándares más estrictos de confidencialidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="method-section">
+        <h2>Gobernanza de Desarrollo</h2>
+        <p class="section-subtitle">Preservamos a nuestros clientes de las inconsistencias del código diario. Solo interactuás con entregables pulidos.</p>
+        
+        <div class="timeline">
+            <div class="step">
+                <h4>01. Relevamiento</h4>
+                <p>Análisis y auditoría de tus flujos de trabajo tradicionales para definir las instrucciones de control necesarias.</p>
+            </div>
+            <div class="step">
+                <h4>02. Versión Alpha</h4>
+                <p>Presentación estructural del diseño y la arquitectura visual del sistema para validación de la interfaz.</p>
+            </div>
+            <div class="step">
+                <h4>03. Versión Beta</h4>
+                <p>Entrega funcional en entorno controlado para auditar la carga de datos y la lógica de los algoritmos.</p>
+            </div>
+            <div class="step">
+                <h4>04. Producción</h4>
+                <p>Despliegue final, configuración en el sistema operativo anfitrión e inicio del soporte de mantenimiento técnico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <h2>Cotizá tu Proyecto</h2>
+        <p class="section-subtitle">Contanos qué tarea querés que tu equipamiento ejecute automáticamente y nos pondremos en contacto.</p>
+        
+        <div class="form-container">
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Digital Génesis: Formulario enviado (Simulación Operativa)');">
+                <div class="form-group">
+                    <label for="nombre">Nombre o Razón Social</label>
+                    <input type="text" id="nombre" placeholder="Ej. Almacén Don Juan / Particular" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="requerimiento">Requerimiento de Digitalización</label>
+                    <select id="requerimiento">
+                        <option value="quiosco">Automatización de Stock y Caja (Local)</option>
+                        <option value="pyme">Desarrollo Web / E-Commerce (Expansión)</option>
+                        <option value="medida">Desarrollo Exclusivo a Medida</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Detalles del problema o flujo a automatizar</label>
+                    <textarea id="mensaje" rows="5" placeholder="Describí brevemente qué necesitás que haga el software..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Solicitud de Auditoría</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>DIGITAL GÉNESIS</h4>
+                <p>Agencia Corporativa de Transformación Digital e Ingeniería de Software.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Legales</h5>
+                <a href="#">Términos de Servicio</a>
+                <a href="#">Políticas de Confidencialidad (NDA)</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Digital Génesis. Todos los derechos reservados. Domicilio Fiscal Centralizado, Bella Vista, Corrientes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

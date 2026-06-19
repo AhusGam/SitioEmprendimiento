@@ -1,0 +1,398 @@
+/* VARIABLES DE PALETA DE COLORES (Muy Grande Supremo) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    
+    /* Colores del Personaje */
+    --supremo-blue: #2d9cdb;    /* Azul base del cuerpo */
+    --supremo-red: #d32f2f;     /* Rojo carmín de detalles */
+    --supremo-accent: #e2e8f0;  /* Gris muy claro del pecho */
+    
+    --card-bg: #ffffff;
+    --border-color: #cbd5e1;
+    --input-bg: #ffffff;
+}
+
+/* VARIABLES MODO OSCURO (Dark Mode) */
+[data-theme="dark"] {
+    --bg-primary: #0b0f19;      /* Fondo oscuro profundo */
+    --bg-secondary: #131a26;    /* Contenedores oscuros */
+    --text-main: #f1f5f9;       /* Texto claro */
+    --text-muted: #94a3b8;
+    
+    --supremo-blue: #38bdf8;    /* Azul eléctrico brillante */
+    --supremo-red: #ef4444;     /* Rojo encendido */
+    
+    --card-bg: #131a26;
+    --border-color: #334155;
+    --input-bg: #1e293b;
+}
+
+/* ESTILOS GENERALES BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ENCABEZADO Y NAVEGACIÓN */
+header {
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--border-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--supremo-blue);
+}
+
+.nav-menu a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: var(--supremo-blue);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-toggle {
+    background-color: var(--supremo-red);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-main);
+    cursor: pointer;
+    display: none; /* Se activa en móviles */
+}
+
+/* MENÚ DESLIZABLE LATERAL (MÓVIL) */
+.mobile-side-menu {
+    position: fixed;
+    top: 0;
+    right: -280px; /* Escondido por defecto */
+    width: 280px;
+    height: 100%;
+    background-color: var(--bg-secondary);
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    z-index: 200;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+}
+
+.mobile-side-menu.active {
+    right: 0; /* Desliza hacia adentro */
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: var(--supremo-red);
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.mobile-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* SECCIONES: ESTILOS COMUNES */
+section {
+    padding: 80px 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* SECCIÓN HERO */
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    text-align: center;
+    padding: 120px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--supremo-red);
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: var(--supremo-blue);
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid var(--supremo-blue);
+    color: var(--supremo-blue);
+}
+
+/* SECCIÓN SERVICIOS */
+.services-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 6px;
+    width: 320px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--supremo-blue);
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* SECCIÓN METODOLOGÍA */
+.method-section {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 220px;
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--supremo-red);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.step h4 {
+    color: var(--supremo-red);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* SECCIÓN CONTACTO */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--supremo-blue);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: var(--supremo-red);
+}
+
+/* PIE DE PÁGINA (FOOTER) */
+footer {
+    background-color: var(--bg-secondary);
+    border-top: 2px solid var(--border-color);
+    padding: 40px 20px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.footer-links h5 {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-links a:hover {
+    color: var(--supremo-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* RESPONSIVE (MÓVILES) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde menú normal */
+    }
+    .hamburger {
+        display: block; /* Muestra el icono de tres barras */
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .timeline {
+        flex-direction: column;
+    }
+}
